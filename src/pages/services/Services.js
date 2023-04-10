@@ -3,11 +3,12 @@ import "./services.css";
 // import { Link } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {baseUrl} from "../../baseUrl";
 
 const Services = () => {
   const [services, setServices] = useState([]);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   useEffect(() => {
