@@ -8,12 +8,13 @@ import mother from "../../img/mother.jpg";
 import adTeam from "../../img/adTeam.jpg";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {baseUrl} from "../../baseUrl";
 
 const Info = () => {
   const [personnels, setPersonnels] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   useEffect(() => {
