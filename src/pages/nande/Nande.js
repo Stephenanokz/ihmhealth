@@ -4,12 +4,13 @@ import "./nande.css";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import divider from "../../img/sharp-paper-top.svg";
 import axios from "axios";
+import {baseUrl} from "../../baseUrl";
 
 const Nande = () => {
   const [featuredPost, setFeaturedPost] = useState(null);
   const [latestPosts, setLatestPosts] = useState([]);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   useEffect(() => {
