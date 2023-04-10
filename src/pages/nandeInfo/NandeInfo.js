@@ -4,12 +4,13 @@ import Navbar from "../../components/navbar/Navbar";
 import axios from "axios";
 import Footer from "../../components/footer/Footer";
 import PagesIcon from "@mui/icons-material/Pages";
+import {baseUrl} from "../../baseUrl";
 
 const NandeInfo = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   useEffect(() => {
