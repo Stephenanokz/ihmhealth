@@ -3,12 +3,13 @@ import "./board.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import axios from "axios";
+import {baseUrl} from "../../baseUrl";
 
 const Board = () => {
   const [personnels, setPersonnels] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   useEffect(() => {
