@@ -7,13 +7,14 @@ import axios from "axios";
 import genPop from "../../img/servicesTopImg.jpg";
 import paediatrics from "../../img/pediatrics.jpg";
 import surgery from "../../img/surgery.jpg";
+import {baseUrl} from "../../baseUrl";
 
 const ServiceInfo = () => {
   const [services, setServices] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   const [hoveredItemIds, setHoveredItemIds] = useState({});
