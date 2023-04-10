@@ -1,0 +1,303 @@
+.serviceInfo{
+    background-color: var(--secondary-color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+    gap: 50px;
+}
+
+.serviceInfo > .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.704);
+    color: var(--gray-900);
+    text-align: center;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+}
+
+.serviceInfo > .title h1{
+    font-size: var(--big-font-size);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.serviceInfo > .title .quote{
+    font-size: var(--h3-font-size);
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.serviceInfo > .title .author{
+    font-size: var(--h3-font-size);
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    color: gray;
+    font-style: italic;
+}
+
+.serviceInfo > .serviceList{
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+}
+
+.serviceInfo > .serviceList .serviceItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+    transition: all .2s ease-in;
+    overflow: hidden;
+}
+
+.serviceInfo > .serviceList .serviceItem .serviceItemTitle{
+    background-color: var(--primary-color-light);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: var(--gray-100);
+    font-weight: 600;
+    font-size: var(--normal-font-size);
+    text-transform: capitalize;
+}
+
+.serviceInfo > .serviceList .serviceItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.serviceInfo > .serviceList .serviceItem .desc{
+    text-align: justify;
+    background-color: white;
+    position: absolute;
+    height: 95%;
+    width: 100%;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    transition: all .2s ease-in;
+    cursor: default;
+    padding: 5px;
+}
+
+.serviceInfo > .serviceList .serviceItem .desc::selection{
+    background: var(--primary-color-dark);
+    color: white;
+}
+
+.hide{
+    display: none;
+}
+
+
+.serviceInfo > .specialties{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-color: rgba(255, 255, 255, 0.704);
+    color: var(--gray-900);
+    padding-bottom: 50px;
+}
+
+.serviceInfo > .specialties .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.704);
+    color: var(--gray-900);
+    text-align: center;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+}
+
+.serviceInfo > .specialties .top h2{
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+}
+
+.serviceInfo > .specialties .top span{
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    text-align: justify;
+    max-width: 85%;
+    margin-bottom: 20px;
+}
+
+.serviceInfo > .specialties .specialtyList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.serviceInfo > .specialties .specialtyList .specialtyItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+}
+
+.serviceInfo > .specialties .specialtyList .specialtyItem .desc{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: justify;
+    gap: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.serviceInfo > .specialties .specialtyList .specialtyItem .title{
+    color: gray;
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+}
+
+.serviceInfo > .specialties .specialtyList .specialtyItem .body{
+    background-color: var(--primary-color-dark);
+    color: var(--gray-100);
+    padding: 10px;
+    font-size: var(--small-font-size);
+    border-radius: 8px;
+}
+
+.serviceInfo > .specialties .bottom img{
+    display: none;
+    width: 300px;
+    flex: 1;
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+
+    .serviceInfo > .title h1 {
+        font-size: var(--biggest-font-size);
+    }
+
+    .serviceInfo > .title .quote, .serviceInfo > .title .author{
+        font-size: var(--h2-font-size);
+        max-width: 600px;
+    }
+
+    .serviceInfo > .serviceList{
+        width: 75%;
+    }
+
+    .serviceInfo > .serviceList .serviceItem{
+        width: 250px;
+        height: 180px;
+    }
+
+    .serviceInfo > .specialties .top span{
+        max-width: 100%;
+    }
+
+    .serviceInfo > .specialties .top{
+        width: 60%;
+        box-shadow: none;
+    }
+
+    .serviceInfo > .specialties .bottom{
+        width: 60%;
+    }
+
+    .serviceInfo > .specialties .top h2 {
+        font-size: var(--big-font-size);
+    }
+
+    .serviceInfo > .specialties .top span {
+        font-size: var(--h2-font-size);
+    }
+
+    .serviceInfo > .specialties .specialtyList{
+        gap: 15px;
+    }
+
+    .serviceInfo > .specialties .specialtyList .specialtyItem{
+        background-color: var(--gray-300);
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .serviceInfo > .specialties .specialtyList .specialtyItem .title {
+        font-size: var(--h3-font-size);
+    }
+
+    .serviceInfo > .specialties .specialtyList .specialtyItem .body{
+        background-color: inherit;
+        color: inherit;
+    }
+    
+    .serviceInfo > .specialties .specialtyList .specialtyItem .desc{
+        border-bottom: none;
+    }
+    
+    .serviceInfo > .specialties .bottom img{
+        display: inline-block;
+        width: 200px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px){
+    .serviceInfo > .serviceList{
+        width: 70%;
+    }
+
+    .serviceInfo > .serviceList .serviceItem{
+        width: 280px;
+        height: 200px;
+    }
+
+    .serviceInfo > .specialties .specialtyList{
+        gap: 20px;
+    }
+
+    .serviceInfo > .specialties .top h2 {
+        font-size: 2rem;
+    }
+
+    .serviceInfo > .specialties .specialtyList .specialtyItem .title {
+        font-size: var(--h1-font-size);
+    }
+    
+    .serviceInfo > .specialties .specialtyList .specialtyItem .body {
+        font-size: var(--h3-font-size);
+        font-weight: 300;
+    }
+}
+
+/* For extra-large devices */
+@media screen and (min-width: 1200px){
+   
+}

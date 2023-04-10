@@ -1,0 +1,167 @@
+.about{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.aboutTop{
+    margin-top: 0;
+    background-color: var(--primary-color-dark);
+    width: 80%;
+    height: 28%;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.64);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.64);
+}
+
+.aboutTop > img{
+    height: 320px;
+    position: absolute;
+    top: -80px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.aboutBottom{
+    margin-top: -100px;
+    background-color: var(--primary-color-dark);
+    width: 90%;
+    height: auto;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.64);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.64);
+    color: var(--secondary-color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+}
+
+.aboutTitle{
+    margin-bottom: 1.75rem;
+}
+
+.aboutTitle > h2{
+    text-transform: uppercase;
+    font-size: var(--h2-font-size);
+    margin-top: .7rem;
+}
+
+.aboutTitle > h3{
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+.aboutDesc{
+    margin-bottom: 1.2rem;
+}
+
+.aboutDesc > p{
+    font-size: var(--small-font-size);
+}
+
+.aboutButton{
+    width: auto;
+    padding: 10px 25px;
+    background-color: var(--secondary-color-light);
+    color: var(--gray-900);
+    font-weight: var(--font-medium);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .3s;
+    font-size: var(--small-font-size);
+}
+
+.aboutButton:hover{
+    background-color: var(--accent-color);
+    color: var(--gray-100);
+}
+
+.aboutDivider{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--accent-color-light);
+}
+
+/* For small devices */
+@media screen and (max-width: 300px){
+    .aboutTop{
+        height: 25%;
+    }
+
+    .aboutTop > img{
+        height: 260px;
+        top: -50px;
+    }
+
+    .aboutBottom{
+    padding: 1rem 1.2rem;
+    }
+
+    .aboutButton{
+    padding: 8px 15px;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+    .about{
+        height: 100vh;
+    }
+
+    .aboutTop {
+        width: 550px;
+        height: 350px;
+    }
+
+    .aboutTop > img {
+        height: 350px;
+        width: 280px;
+        object-fit: fill;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px){
+    .about{
+        flex-direction: row;
+    }
+
+    .aboutTop{
+        margin-top: -100px;
+        width: 30%;
+        height: 300px;
+    }
+
+    .aboutBottom{
+        width: 50%;
+        height: 300px;
+    }
+
+    .aboutTop > img {
+        height: 300px;
+        width: 250px;
+        top: -50px;
+    }
+    
+    .aboutTitle {
+        margin-bottom: 1rem;
+    }
+
+    .aboutDesc > p{
+        font-size: var(--normal-font-size);
+    }
+}

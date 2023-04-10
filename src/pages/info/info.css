@@ -1,0 +1,192 @@
+.info{
+    background-color: var(--secondary-color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.infoTitle{
+    color: var(--gray-900);
+    font-family: var(--heading-family);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    font-size: var(--h1-font-size);
+    margin: 5px 20px;
+    margin-top: 20px;
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.infoItem{
+    margin: 18px;
+    background-color: rgba(74, 132, 194, 0.168);
+    color: var(--gray-900);
+    border-radius: 8px;
+    padding: 30px 15px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.infoItem > h3{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: var(--h3-font-size);
+    text-transform: uppercase;
+}
+
+.infoItem > p{
+    font-size: var(--small-font-size);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.compassionList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.compassionList > span{
+    margin-bottom: 5px;
+    font-size: var(--small-font-size);
+}
+
+.infoServicesList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoServicesListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: var(--small-font-size);
+}
+.infoItem > .infoTeamMainContainer > .infoTeamContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.infoItem > .infoTeamMainContainer > .infoTeamContainer > img{
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.infoItem > .infoTeamMainContainer > .infoTeamContainer.wide > img{
+    width: 100%;
+}
+
+.infoItem > .infoTeamMainContainer > .infoTeamContainer > .infoTeamName{
+    color: black;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.infoItem > .infoTeamMainContainer > .infoTeamContainer > .infoTeamTitle{
+    color: gray;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+.infoItem .infoButton{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    width: max-content;
+    margin: 0 auto;
+    color: var(--gray-100);
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: var(--small-font-size);
+    transition: all .3s ease;
+}
+
+.infoItem .infoButton:hover{
+    background-color: var(--primary-color-dark);
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+    .infoItem > .infoTeamMainContainer > .infoTeamContainer > img{
+        height: 250px;
+        width: 250px;
+    }
+
+    .infoItem > .infoTeamMainContainer > .infoTeamContainer.wide > img{
+        width: 90%;
+        height: 400px;
+    }
+
+    .infoItem > h3{
+        font-size: 1.35rem;
+    }
+
+    .infoItem:nth-child(1) > h3{
+        text-align: center;
+    }
+
+    .infoItem > p {
+        font-size: var(--normal-font-size);
+    }
+
+    .infoItem .infoButton{
+        font-size: var(--normal-font-size);
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px){
+    .info {
+        margin-top: 5rem;
+    }
+
+    .infoTeamMainContainer{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 50px;
+        row-gap: 0;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .infoTitle{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .infoItem > .infoTeamMainContainer > .infoTeamContainer > img {
+        height: 350px;
+        width: 320px;
+    }
+
+    .infoItem > .infoTeamMainContainer > .infoTeamContainer.wide > img {
+        height: 400px;
+        width: 650px;
+    }
+}
+
+/* For extra-large devices */
+@media screen and (min-width: 1200px){
+   
+}
