@@ -4,7 +4,6 @@ import "./services.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-let selectedServices = [];
 const Services = () => {
   const [services, setServices] = useState([]);
   const axiosInstance = axios.create({
@@ -28,7 +27,7 @@ const Services = () => {
     getServices();
   }, []);
 
-  selectedServices = services.slice(0, 6);
+  const selectedServices = services.slice(0,6)
 
   return (
     <div className="services" id="services">
