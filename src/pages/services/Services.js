@@ -4,6 +4,7 @@ import "./services.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+let selectedServices = [];
 const Services = () => {
   const [services, setServices] = useState([]);
   const axiosInstance = axios.create({
@@ -27,7 +28,7 @@ const Services = () => {
     getServices();
   }, []);
 
-  const selectedServices = services.slice(0,6)
+  selectedServices = services.slice(0, 6);
 
   return (
     <div className="services" id="services">
@@ -49,17 +50,19 @@ const Services = () => {
         <div className="servicesDescContainer">
           {selectedServices.map((service) => (
             // <Link to={`/services/${service._id}`} key={service._id}>
-              <div className="servicesDescItem" key={service._id}>
-                <img src={service.img} alt="X-ray" />
-                <div className="servicesDescText">
-                  <h3>{service.title}</h3>
-                  <p>{service.desc}</p>
-                </div>
+            <div className="servicesDescItem" key={service._id}>
+              <img src={service.img} alt="X-ray" />
+              <div className="servicesDescText">
+                <h3>{service.title}</h3>
+                <p>{service.desc}</p>
               </div>
+            </div>
             // </Link>
           ))}
         </div>
-        <Link to="/services" className="moreServices">View all services</Link>
+        <Link to="/services" className="moreServices">
+          View all services
+        </Link>
       </div>
     </div>
   );
