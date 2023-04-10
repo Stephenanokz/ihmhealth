@@ -8,13 +8,14 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Nande from "../nande/Nande";
 import axios from "axios";
+import {baseUrl} from "../../baseUrl";
 
 const Main = () => {
   const [landingText, setLandingText] = useState();
   const [aboutItem, setAboutItem] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: baseUrl,
   });
 
   useEffect(() => {
