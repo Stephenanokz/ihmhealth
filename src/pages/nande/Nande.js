@@ -65,10 +65,10 @@ const Nande = () => {
             {/* <p>
               {truncateString(featuredPost.message, 340)}
             </p> */}
-//             <span className="opening">
-//               Upcoming Event – Official Opening of the New Hospital is scheduled
-//               to take place on the 11th April 2023 (Easter Tuesday).
-//             </span>
+            {/*<span className="opening">
+              Upcoming Event – Official Opening of the New Hospital is scheduled
+              to take place on the 11th April 2023 (Easter Tuesday).
+            </span>*/}
           </div>
         </div>
       </div>
